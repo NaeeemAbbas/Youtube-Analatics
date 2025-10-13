@@ -11,7 +11,6 @@ import {
   Legend,
 } from 'chart.js';
 
-// Register chart elements
 ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement, Tooltip, Legend);
 
 export default function ChartCard({ title, data }) {
@@ -22,7 +21,7 @@ export default function ChartCard({ title, data }) {
         label: 'Views',
         data: data.map((item) => item.views),
         borderColor: '#3b82f6',
-        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+        backgroundColor: 'rgba(59,130,246,0.1)',
         fill: true,
         tension: 0.4,
         pointRadius: 4,
@@ -32,13 +31,8 @@ export default function ChartCard({ title, data }) {
 
   const options = {
     responsive: true,
-    plugins: {
-      legend: { display: false },
-    },
-    scales: {
-      x: { grid: { display: false } },
-      y: { grid: { color: '#f3f4f6' } },
-    },
+    plugins: { legend: { display: false } },
+    scales: { x: { grid: { display: false } }, y: { grid: { color: '#f3f4f6' } } },
   };
 
   return (
