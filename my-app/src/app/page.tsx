@@ -1,58 +1,65 @@
 import Link from "next/link";
+import { PlusCircle } from "lucide-react";
 
 export default function Home() {
-  const data = {
-    channelName: "My YouTube Channel",
-    views: "45.3K",
-    subscribers: "3.2K",
-    watchTime: "1.8K hrs",
-    videos: 54,
-    likes: "12.4K",
-    comments: "3.9K",
-  };
   return (
-    <main className="min-h-screen bg-gray-100 p-10">
+    <main className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 p-10">
       {/* Header */}
-      <header className="flex items-center justify-between mb-10">
-        <h1 className="text-3xl font-bold text-gray-800">
-          {data.channelName} Dashboard
-        </h1>
-        <Link href={"/dashboard"} className="bg-red-500 text-white px-5 py-2 rounded-lg hover:bg-red-600 transition">
-          + Create New Channel
+      <header className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-10">
+        <div>
+          <h1 className="text-4xl font-bold text-gray-800 tracking-tight">
+            YouTube Analytics Dashboard
+          </h1>
+          <p className="text-gray-500 mt-2">
+            Manage your channels and track performance.
+          </p>
+        </div>
+
+        <Link
+          href={"/dashboard"}
+          className="mt-4 sm:mt-0 flex items-center gap-2 bg-red-500 text-white px-5 py-2.5 rounded-lg hover:bg-red-600 transition-all shadow-md hover:shadow-lg"
+        >
+          <PlusCircle size={18} />
+          Create New Channel
         </Link>
-      
       </header>
 
-      {/* Stats Cards */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="bg-white p-6 rounded-xl shadow">
-          <h2 className="text-gray-500 text-sm">Total Views</h2>
-          <p className="text-3xl font-semibold mt-2">{data.views}</p>
+      {/* Channel Cards */}
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Channel 1 */}
+        <div className="bg-white hover:bg-gray-50 transition-all cursor-pointer p-6 rounded-2xl shadow-md hover:shadow-lg border border-gray-100 group">
+          <h2 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-red-500 transition">
+            Channel 1
+          </h2>
+          <p className="text-sm text-gray-500">
+            View detailed analytics and stats.
+          </p>
         </div>
 
-        <div className="bg-white p-6 rounded-xl shadow">
-          <h2 className="text-gray-500 text-sm">Subscribers</h2>
-          <p className="text-3xl font-semibold mt-2">{data.subscribers}</p>
+        {/* Channel 2 */}
+        <div className="bg-white hover:bg-gray-50 transition-all cursor-pointer p-6 rounded-2xl shadow-md hover:shadow-lg border border-gray-100 group">
+          <h2 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-red-500 transition">
+            Channel 2
+          </h2>
+          <p className="text-sm text-gray-500">
+            View detailed analytics and stats.
+          </p>
         </div>
 
-        <div className="bg-white p-6 rounded-xl shadow">
-          <h2 className="text-gray-500 text-sm">Watch Time</h2>
-          <p className="text-3xl font-semibold mt-2">{data.watchTime}</p>
+        {/* Channel 3 */}
+        <div className="bg-white hover:bg-gray-50 transition-all cursor-pointer p-6 rounded-2xl shadow-md hover:shadow-lg border border-gray-100 group">
+          <h2 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-red-500 transition">
+            Channel 3
+          </h2>
+          <p className="text-sm text-gray-500">
+            View detailed analytics and stats.
+          </p>
         </div>
 
-        <div className="bg-white p-6 rounded-xl shadow">
-          <h2 className="text-gray-500 text-sm">Videos Uploaded</h2>
-          <p className="text-3xl font-semibold mt-2">{data.videos}</p>
-        </div>
-
-        <div className="bg-white p-6 rounded-xl shadow">
-          <h2 className="text-gray-500 text-sm">Likes</h2>
-          <p className="text-3xl font-semibold mt-2">{data.likes}</p>
-        </div>
-
-        <div className="bg-white p-6 rounded-xl shadow">
-          <h2 className="text-gray-500 text-sm">Comments</h2>
-          <p className="text-3xl font-semibold mt-2">{data.comments}</p>
+        {/* Add New Channel */}
+        <div className="bg-white flex flex-col items-center justify-center p-6 rounded-2xl shadow-md hover:shadow-lg border border-dashed border-gray-300 hover:border-red-400 transition cursor-pointer">
+          <PlusCircle className="text-red-500 mb-2" size={32} />
+          <span className="text-gray-600 font-medium">Add Channel</span>
         </div>
       </section>
     </main>
