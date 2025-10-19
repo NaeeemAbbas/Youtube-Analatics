@@ -10,7 +10,7 @@ export const ChannelsData = [
       thumbnail: '/images/tech-channel.jpg'
     },
     overview: {
-      views: 245000,
+      views: 2450000,
       watchTime: 12500000,
       subscribers: 12500,
       revenue: 12500,
