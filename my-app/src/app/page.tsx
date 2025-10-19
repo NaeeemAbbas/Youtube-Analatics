@@ -11,12 +11,12 @@ export default function Home() {
             YouTube Analytics Dashboard
           </h1>
           <p className="text-gray-500 mt-2">
-            Manage your channels and track performance.
+            Manage your channels and track performace.
           </p>
         </div>
 
         <Link
-          href={"/dashboard"}
+          href={"/forms/Channel"}
           className="mt-4 sm:mt-0 flex items-center gap-2 bg-red-500 text-white px-5 py-2.5 rounded-lg hover:bg-red-600 transition-all shadow-md hover:shadow-lg"
         >
           <PlusCircle size={18} />
@@ -62,6 +62,9 @@ export default function Home() {
           <span className="text-gray-600 font-medium">Add Channel</span>
         </div>
       </section>
+
+      
     </main>
+
   );
 }
