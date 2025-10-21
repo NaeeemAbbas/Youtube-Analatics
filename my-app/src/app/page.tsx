@@ -11,7 +11,7 @@ export default function Home() {
             YouTube Analytics Dashboard
           </h1>
           <p className="text-gray-500 mt-2">
-            Manage your channels and  performance.
+            Manage your channels and track performance.
           </p>
         </div>
 
