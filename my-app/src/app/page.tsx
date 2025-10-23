@@ -52,7 +52,7 @@ export default function Home() {
             Channel 3
           </h2>
           <p className="text-sm text-gray-500">
-            View detailed analytics and stats.
+            View detailed analytics and .
           </p>
         </div>
 
